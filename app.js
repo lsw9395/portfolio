@@ -1,7 +1,106 @@
 const projects = [
-{id:'mes',category:'work',name:'MES · 설비 시스템 연계',period:'2025.05 — 2025.10',label:'실무 프로젝트',art:'MES ↔ MCS',caption:'SYSTEM INTEGRATION',tone:'',tags:['Spring Boot','RabbitMQ','MSSQL'],summary:'Web MES·PDA 개발부터 메시지 연계 서버 구현, 실제 자동화 설비 테스트까지.',role:'Web MES·PDA 개발 및 MES–MCS 메시지 연계 서버 구현',context:'제조업 MES 구축 프로젝트에서 화면·데이터 처리 기능을 개발하고 베트남 현장에서 업무 프로세스를 검증했습니다. 이후 자동화 설비 시스템과의 연계 업무를 수행했습니다.',actions:['PostgreSQL에서 MSSQL로의 전환, 다국어 처리 등 공통 기능 개발·개선','내부 통신 서버 개발 지연에 대응해 Spring Boot·RabbitMQ 기반 연계 서버 구현','tranId 기반 요청·응답 매칭과 송수신 이력 관리 기능 개발','자동화 설비 협력사와 국내 공장 연계 테스트 및 통신·데이터 처리 오류 수정'],outcome:'협력사 연동 테스트에서 동작을 확인한 메시지 연계 방식이 프로젝트에 채택되었습니다.',note:'실무 프로젝트입니다. 회사 소스코드와 내부 화면은 공개하지 않습니다.',links:[]},
-{id:'nsiis',category:'work',name:'통합정보시스템 구축',period:'2024.05 — 2025.02',label:'실무 프로젝트',art:'UI → DB',caption:'BUSINESS APPLICATION',tone:'art-blue',tags:['Java','EMRO','Oracle'],summary:'요구사항을 화면과 테이블 구조로 구체화하고, 결재 모듈과 업무 기능을 연결했습니다.',role:'업무 화면·기능 개발, 문서관리시스템 구현 및 결재 모듈 연계',context:'처음 고객사에 파견되어 PM·PL·개발자와 협업한 프로젝트입니다. EMRO 프레임워크와 Oracle을 활용해 웹 업무시스템을 구축했습니다.',actions:['엑셀 자료와 구두 설명을 간이 화면설계서 및 테이블 구조로 정리','화면에서 사용하는 데이터의 연결 관계를 PM과 협의한 후 구현','다른 개발자가 담당한 결재 모듈의 처리 방식을 이해하고 기능 연계','회의에 참여하며 요구사항과 프로젝트 진행 방향 공유'],outcome:'확인한 요구사항을 바탕으로 문서관리시스템을 개발했습니다. 개별 기능뿐 아니라 전체 업무 흐름을 고려하는 협업을 경험했습니다.',note:'실무 프로젝트입니다. 회사 소스코드와 내부 화면은 공개하지 않습니다.',links:[]},
-{id:'scada',category:'work',name:'SCADA 설비 모니터링',period:'2024.02 — 2024.04',label:'실무 프로젝트',art:'MONITOR',caption:'FACTORY OPERATIONS',tone:'art-sand',tags:['SCADA Master','설비 모니터링'],summary:'현장의 자동 모니터링 요구를 반영해 설비 상태를 확인하는 화면을 개발했습니다.',role:'오토닉스 SCADA Master 기반 모니터링 화면 개발',context:'제조 설비의 상태와 데이터를 확인하는 현장 모니터링 시스템 개발에 참여했습니다.',actions:['설비 상태 및 데이터 확인을 위한 모니터링 화면 구현','초기 구현 후 현장의 자동 모니터링 요구사항 재확인','설비 상태를 지속적으로 확인할 수 있도록 화면 동작 방식 수정'],outcome:'실제 현장 운영 방식에 맞추어 화면을 개선하며 사용자 요구사항을 정확히 이해하는 중요성을 배웠습니다.',note:'실무 프로젝트입니다. 회사 소스코드와 내부 화면은 공개하지 않습니다.',links:[]},
+{
+  "id": "mes",
+  "category": "work",
+  "name": "DRB 동일고무벨트 · Web MES",
+  "period": "2025.05 — 2025.10",
+  "label": "실무 프로젝트",
+  "art": "MES ↔ MCS",
+  "caption": "SYSTEM INTEGRATION",
+  "tone": "",
+  "tags": [
+    "Java",
+    "Spring Framework",
+    "JSP",
+    "RabbitMQ"
+  ],
+  "summary": "생산 오더 접수 화면을 현장 작업 순서에 맞게 수정하고, MES와 자동창고 설비를 연결하는 메시지 서버를 구현했습니다.",
+  "role": "Java·Spring Framework·JSP 기반 Web MES 개발, PostgreSQL → MSSQL 전환, Spring Boot·RabbitMQ 기반 MES–MCS 연동",
+  "context": "베트남 공장에서 작업자들이 설비를 다루는 모습과 공정별 반제품을 직접 봤습니다. 한 공정의 반제품이 다음 공정에 투입되는 순서를 따라가면서, 화면에서 다루던 데이터가 어느 작업에서 생기는지 확인했습니다.",
+  "actions": [
+    "작업자가 오더 접수 시점에 생산 설비를 정한다는 점을 확인하고, 접수 화면에서 설비를 함께 배정하도록 수정했습니다.",
+    "데이터베이스를 전환하며 기존 SQL을 MSSQL에 맞게 수정하고, Web MES의 공통 기능과 다국어 처리를 개발했습니다.",
+    "자동화 설비 협력사와 정한 규격에 맞춰 Spring Boot로 JSON 메시지를 송수신하는 서버를 개발했습니다. tranId로 요청과 응답을 짝짓고 송수신 이력을 DB에 기록했습니다."
+  ],
+  "outcome": "베트남에서는 작업자들과 수정한 Web MES·PDA 기능을 다시 테스트했습니다. 부산공장 사전 테스트에서는 협력사와 양쪽의 메시지를 대조하고, 전송한 요청에 따라 자동창고 설비가 움직이는 것을 확인했습니다.",
+  "note": "회사 소스코드와 내부 화면은 비공개입니다.",
+  "links": []
+},
+{
+  "id": "nsiis",
+  "category": "work",
+  "name": "두산에너빌리티 NSIIS · 문서관리",
+  "period": "2024.05 — 2025.02",
+  "label": "실무 프로젝트",
+  "art": "DOCS",
+  "caption": "BUSINESS APPLICATION",
+  "tone": "art-blue",
+  "tags": [
+    "Java",
+    "Spring 기반 EMRO",
+    "Oracle"
+  ],
+  "summary": "여러 업무 화면에서 재사용하는 문서관리 화면을 개발하고, 결재 결과에 따라 문서 상태와 다음 단계가 바뀌도록 구현했습니다.",
+  "role": "공통 문서관리 화면, 전자결재 연계 및 기간별 일정 조회 화면 개발",
+  "context": "여러 업무에서 문서관리가 필요했고, 각 화면에서 보여 줄 문서와 표의 열 구성이 달랐습니다. 결재 팝업은 동료가, 문서관리 화면과 문서 상태 처리는 제가 맡았습니다.",
+  "actions": [
+    "호출 화면에서 전달한 문서 키로 조회 대상을 정하고, 매개변수에 따라 표의 열 개수와 구성을 바꾸도록 구현했습니다.",
+    "동료와 결재 팝업을 여는 데 필요한 데이터를 맞췄습니다. 결재를 요청하면 문서 상태를 결재 중으로 바꾸고, 결재 결과를 문서관리 화면에 반영했습니다.",
+    "기존 달력형 일정 화면을 표로 변경했습니다. 조회 기간에 맞춰 날짜 열을 생성해 담당자별 업무를 한눈에 볼 수 있도록 했습니다."
+  ],
+  "outcome": "각 업무 화면에서 필요한 값만 전달하면 같은 문서관리 화면을 사용할 수 있게 됐습니다. 사용자는 해당 화면에서 결재 상태를 확인하고 문서 상태에 맞는 다음 단계로 진행할 수 있습니다.",
+  "note": "회사 소스코드와 내부 화면은 비공개입니다.",
+  "links": []
+},
+{
+  "id": "orion",
+  "category": "work",
+  "name": "오리온테크놀로지 · 포장·출하 PDA",
+  "period": "2025.02 — 2025.05",
+  "label": "실무 프로젝트",
+  "art": "LOT",
+  "caption": "PACKING & SHIPPING",
+  "tone": "art-dark",
+  "tags": [
+    "Java",
+    "Spring Boot",
+    "SQL"
+  ],
+  "summary": "제품 번호를 박스·팔레트 번호와 연결해 출하 후에도 특정 제품의 포장 이력을 찾을 수 있도록 개발했습니다.",
+  "role": "PDA에서 사용하는 Spring Boot 웹 화면과 업무 SQL 개발",
+  "context": "제품을 박스에 담고 여러 박스를 팔레트에 싣는 작업이 순서대로 진행됐습니다. 출하 후 제품에 문제가 생기면 어떤 박스와 팔레트에 들어갔는지 확인할 수 있어야 했습니다.",
+  "actions": [
+    "작업자가 포장할 때 제품 번호와 박스 번호를 연결하는 화면과 SQL을 작성했습니다.",
+    "팔레트에 실을 때에는 박스 번호를 팔레트 번호와 연결해 두 단계의 포장 기록을 남겼습니다."
+  ],
+  "outcome": "제품 번호를 기준으로 박스와 팔레트를 거슬러 확인할 수 있게 됐습니다.",
+  "note": "회사 소스코드와 내부 화면은 비공개입니다.",
+  "links": []
+},
+{
+  "id": "scada",
+  "category": "work",
+  "name": "일진G&S · 설비 모니터링",
+  "period": "2024.02 — 2024.04",
+  "label": "실무 프로젝트",
+  "art": "MONITOR",
+  "caption": "FACTORY OPERATIONS",
+  "tone": "art-sand",
+  "tags": [
+    "SCADAMaster",
+    "SQL"
+  ],
+  "summary": "납품 몇 주 만에 부품 교체 알림이 울려 현장 기록을 분석하고, 대기시간이 가동시간에 포함되던 오류를 수정했습니다.",
+  "role": "오토닉스 SCADAMaster 기반 모니터링 화면 개발 및 부품별 가동시간 계산 SQL 작성",
+  "context": "약 6개월 후 교체할 것으로 예상한 부품에서 납품 몇 주 만에 알림이 발생했습니다. 같은 SQL을 테스트 데이터로 실행했을 때는 예상한 값이 나왔습니다.",
+  "actions": [
+    "현장에서 수집한 일주일치 신호 기록을 확인했습니다. 설비가 작업을 멈춰도 전원이 켜져 있는 동안에는 신호가 계속 ON으로 남았습니다.",
+    "대기시간까지 합산되는 원인을 확인한 뒤, 설비의 실제 작동·정지 신호를 요청했습니다."
+  ],
+  "outcome": "실제 작동 신호를 기준으로 누적 가동시간을 계산하도록 SQL을 수정했습니다.",
+  "note": "회사 소스코드와 내부 화면은 비공개입니다.",
+  "links": []
+},
 {id:'dooray',category:'learning',name:'MiniDooray',period:'2023 · NHN아카데미',label:'교육 · 팀 프로젝트',art:'GATEWAY',caption:'MICROSERVICE ARCHITECTURE',tone:'art-dark',tags:['Java','Spring','Gateway','MSA'],summary:'NHN Dooray의 축소 버전. Gateway를 담당해 API로 분리된 서비스를 연결했습니다.',role:'gateway 및 gateway_cloud 개발',context:'NHN Dooray의 주요 기능을 축소 구현한 팀 프로젝트입니다. 기능별 서비스를 API 형태로 구성했습니다.',actions:['gateway와 gateway_cloud 담당','gateway_cloud를 통해 분리된 API 서비스를 연결하는 MSA 구조 구현'],outcome:'개별 API 서비스와 Gateway의 연결 구조를 구현하며 서비스 간 요청 흐름을 경험했습니다.',note:'심화과정의 CI/CD 환경 구축은 별도 참여 경험이며, 이 프로젝트의 기능 개발과 구분합니다.',links:[['프로젝트 조직','https://github.com/minidooray'],['gateway','https://github.com/minidooray/gateway'],['gateway_cloud','https://github.com/minidooray/gateway_cloud']]},
 {id:'emotion',category:'learning',name:'감정인식 음악 추천 앱',period:'2022.10 — 2022.12',label:'캡스톤 · 개발 전담',art:'MOOD → ♫',caption:'MOBILE × MACHINE LEARNING',tone:'art-lilac',tags:['Flutter','Dart','TensorFlow Lite'],summary:'이미지 분류 모델을 모바일 앱에 적용해 감정 분류와 음악 추천 화면을 연결했습니다.',role:'Flutter 애플리케이션 개발 전담 및 이미지 분류 모델 적용',context:'팀에서 수집한 이미지 데이터를 외부 AI 학습 플랫폼에서 학습한 뒤, TensorFlow Lite 형식으로 모바일 애플리케이션에 적용했습니다.',actions:['Flutter·Dart 기반 UI와 이미지 선택 기능 구현','이미지 분류 모델의 감정 분류 결과 표시','음악 재생 및 추천 화면 연결','결과물을 GitHub 소스코드와 시연 영상으로 정리'],outcome:'AI 분류 모델을 실제 모바일 애플리케이션에 적용하는 개발 과정을 경험했습니다.',links:[['GitHub 소스','https://github.com/lsw9395/emotion_music_app']]},
 {id:'ai',category:'learning',name:'LLM API 연동 실습',period:'2026.10',label:'개인 학습 · AI 도구 활용',art:'ASK → AI',caption:'API INTEGRATION LAB',tone:'art-blue',tags:['Spring Boot','OpenAI API','JSP'],summary:'직접 발급한 API 키를 적용하고, 질문 입력부터 AI 응답 표시까지 확인했습니다.',role:'API 키 발급·설정, 애플리케이션 실행 및 요청·응답 확인',context:'LLM API가 애플리케이션에서 어떻게 활용되는지 이해하기 위한 개인 실습입니다. AI 코딩 도구로 구성한 Java/Spring 애플리케이션을 사용했습니다.',actions:['OpenAI API 키 직접 발급 및 설정','애플리케이션에 키를 적용하고 실제 API 호출 과정 확인','사용자 질문에 대한 응답 표시 확인'],outcome:'외부 LLM API의 설정과 호출, 웹 애플리케이션에 응답이 표시되는 기본 흐름을 확인했습니다.',note:'AI 코딩 도구를 활용한 학습용 실습입니다. 애플리케이션 전체를 직접 구현한 경험으로 소개하지 않습니다.',links:[['GitHub · 실행 안내','https://github.com/lsw9395/spring-ai-work-assistant'],['영상 새 창에서 보기','./media/ai-demo.mp4']]},
