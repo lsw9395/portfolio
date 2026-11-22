@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="이성운 | Java·Spring 기반 웹 업무시스템, SQL·DB 전환, 외부 시스템 연계 실무 포트폴리오">
+  <meta name="description" content="이성운 | Java·Spring 기반 웹 업무시스템, 업무용 SQL, 외부 시스템 연계 실무 포트폴리오">
   <meta name="theme-color" content="#f7f8fc">
   <title>이성운 | Java 웹 개발자</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css?v=20261122-web">
-  <script src="./app.js?v=20261122-web" defer></script>
+  <script src="./app.js?v=20261122-role" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 이동</a>
@@ -31,7 +31,7 @@
         <p class="eyebrow hero-kicker">이성운 <span aria-hidden="true">/</span> 개발 포트폴리오</p>
         <h1 id="hero-title">Java 웹 개발자</h1>
         <p class="hero-lead">Spring으로 업무에 필요한<br class="desktop-break"> 웹 기능을 만듭니다.</p>
-        <p class="intro">약 2년간 Java·Spring 기반 업무시스템을 개발했습니다. 문서관리·전자결재·로그인 기능을 구현했고, 업무용 SQL 작성과 DB 전환, 협력사 시스템 연동을 경험했습니다.</p>
+        <p class="intro">약 2년간 Java·Spring 기반 업무시스템을 개발했습니다. 공통 문서관리와 이메일 인증 로그인을 구현했고, 업무용 SQL 작성과 RabbitMQ 기반 외부 시스템 연동을 경험했습니다.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">프로젝트 보기</a>
           <a class="button secondary" href="#experience">실무 경력 보기</a>
@@ -43,8 +43,8 @@
         <ul class="stack-list">
           <li><span class="stack-label">WEB</span><div><strong>웹 화면</strong><p>JSP · JavaScript</p></div></li>
           <li class="stack-primary"><span class="stack-label">APP</span><div><strong>서버 개발</strong><p>Java · Spring Framework · Spring Boot</p></div></li>
-          <li><span class="stack-label">DATA</span><div><strong>데이터베이스</strong><p>SQL · Oracle · MSSQL · PostgreSQL</p></div></li>
-          <li><span class="stack-label">LINK</span><div><strong>시스템 연계</strong><p>전자결재 모듈 · RabbitMQ</p></div></li>
+          <li><span class="stack-label">DATA</span><div><strong>데이터베이스</strong><p>SQL · Oracle · MSSQL</p></div></li>
+          <li><span class="stack-label">LINK</span><div><strong>시스템 연계</strong><p>RabbitMQ · JSON 메시지</p></div></li>
         </ul>
       </div>
     </section>
@@ -53,7 +53,7 @@
       <div class="projects-head">
         <div class="section-heading">
           <h2 id="projects-title">프로젝트</h2>
-          <p>웹 업무시스템, DB 전환, 외부 시스템 연계에서 맡은 역할과 구현 과정입니다.</p>
+          <p>웹 업무시스템, SQL 작업, 외부 시스템 연계에서 맡은 역할과 구현 과정입니다.</p>
         </div>
         <div class="filters" role="group" aria-label="프로젝트 분류">
           <button type="button" class="active" data-filter="all" aria-pressed="true">전체</button>
@@ -93,8 +93,8 @@
               <h3>재상피앤에스</h3>
               <p>Java·Spring 기반으로 고객사의 사내 업무시스템과 현장 운영 화면을 개발했습니다.</p>
               <ul>
-                <li>두산에너빌리티 NSIIS 공통 문서관리 화면, 전자결재 연계, 외부 사용자 이메일 인증 로그인을 구현했습니다.</li>
-                <li>Web MES·PDA 화면을 개발하고 PostgreSQL 쿼리를 MSSQL에 맞게 수정했습니다.</li>
+                <li>두산에너빌리티 NSIIS에서 공통 문서관리 화면과 외부 사용자 이메일 인증 로그인을 구현했습니다. 동료가 만든 전자결재 팝업을 문서관리 화면에 연결했습니다.</li>
+                <li>Web MES·PDA 화면을 개발하고 기존 쿼리를 MSSQL에 맞게 수정했습니다.</li>
                 <li>SCADA 설비 모니터링 화면을 구현하고 현장 데이터를 바탕으로 가동시간 계산 오류를 수정했습니다.</li>
               </ul>
             </div>
@@ -107,7 +107,7 @@
       <div class="section-heading"><h2 id="skills-title">기술</h2></div>
       <div class="skill-list">
         <div><h3>웹·서버 개발</h3><p>실무</p><div class="chips"><span>Java</span><span>Spring Framework</span><span>Spring Boot</span><span>JSP</span><span>JavaScript</span></div></div>
-        <div><h3>데이터베이스</h3><p>실무</p><div class="chips"><span>SQL</span><span>MyBatis</span><span>Oracle</span><span>MSSQL</span><span>PostgreSQL</span></div></div>
+        <div><h3>데이터베이스</h3><p>실무</p><div class="chips"><span>SQL</span><span>MyBatis</span><span>Oracle</span><span>MSSQL</span></div></div>
         <div><h3>시스템 연계</h3><p>실무</p><div class="chips"><span>RabbitMQ</span><span>JSON</span></div></div>
         <div><h3>협업·배포</h3><p>소스 관리 · 교육 과정에서 CI/CD 구성</p><div class="chips"><span>Git</span><span>SVN</span><span>GitHub Actions</span><span>Jenkins</span><span>Docker</span><span>Linux</span></div></div>
         <div><h3>앱·AI 및 기타</h3><p>교육 · 개인 프로젝트</p><div class="chips"><span>Spring Cloud Gateway</span><span>JPA</span><span>Flutter / Dart</span><span>TensorFlow Lite</span><span>OpenAI API</span><span>Unity</span></div></div>
